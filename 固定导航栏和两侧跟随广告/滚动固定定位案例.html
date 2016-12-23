@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动固定定位案例</title>
+	<style>
+		* { padding: 0; margin: 0; }
+		.top, .nav, .main {
+			margin: 0 auto;
+		}
+		.main {
+			width: 1001px;
+		}
+
+		.fixed-top {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var topHeight = $('.top').height();
+			$(window).scroll(function() {
+				var docScrollTop = $(document).scrollTop();
+				if (docScrollTop >= topHeight) {
+					$('.nav').addClass('fixed-top');
+					$('.main').css('margin-top', $('.nav').height());
+				} else {
+					$('.nav').removeClass('fixed-top');
+					$('.main').css('margin-top', 0);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="top">
+		<img src="images/top.png" height="168" width="1423" alt="">
+	</div>
+	<div class="nav">
+		<img src="images/nav.png" height="83" width="1423" alt="">
+	</div>
+	<div class="main">
+		<img src="images/main.png" height="2734" width="1001" alt="">
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(document).mousemove(function(event) {
+				$('img').css({
+					position: 'absolute',
+					top: event.pageY,
+					left: event.pageX
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="images/1.gif">
+</body>
+</html>
