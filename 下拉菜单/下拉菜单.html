@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* { margin: 0; padding: 0; }
+		ul { list-style: none; }
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+		.wrap {
+			width: 330px;
+			height: 30px;
+			line-height: 30px;
+			margin: 100px auto 0;
+			padding-left: 10px;
+			background-image: url(images/bg.jpg);
+		}
+		.wrap>ul>li {
+			float: left;
+			width: 100px;
+			height: 30px;
+			margin-right: 10px;
+		}
+		.wrap li {
+			text-align: center;
+			background-image: url(images/libg.jpg);
+		}
+		.wrap ul ul{
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.wrap li').hover(function() {
+				$(this).children('ul').stop().slideToggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li>
+				<a href="#">一级菜单</a>
+				<ul>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">一级菜单</a>
+				<ul>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">一级菜单</a>
+				<ul>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+					<li>二级菜单</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
