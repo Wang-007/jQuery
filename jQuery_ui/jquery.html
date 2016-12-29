@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../jquery-ui.min.css">
+	<script type="text/javascript">
+		$(function() {
+			$('.wrap').tabs();
+			$('.dialog').dialog();
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li><a href="#tab1">tab1</a></li>
+			<li><a href="#tab2">tab2</a></li>
+			<li><a href="#tab3">tab3</a></li>
+		</ul>
+		<div id="tab1">1</div>
+		<div id="tab2">2</div>
+		<div id="tab3">3</div>
+	</div>
+	<div class="dialog" title="标题">
+		对话框
+	</div>
+</body>
+</html>
